@@ -84,16 +84,11 @@ from pycards import *
 
 card1 = Card('Ace ', 'Spades')
 
-card2 = Card('Ace', 'Spades')
-
-card3 = Card('Ace', 'Clubs')
+card2 = Card('Ace', 'Clubs')
 
 print(f"Is card1 == card2 ? {card1 > card2}")
 
-print(f"Is card1 == card3 ? {card1 > card2}")
-
-# Output : Is card1 == card2 ? True
-# Output : Is card1 == card3 ? False
+# Output : Is card1 == card2 ? False
 ```
 
 #### Creating a deck and displaying the first few cards
