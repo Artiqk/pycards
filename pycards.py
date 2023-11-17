@@ -205,9 +205,3 @@ class Card:
 	@classmethod
 	def get_red_suits(cls):
 		return ['hearts', 'diamonds']
-	
-
-
-if __name__ == '__main__':
-	deck = Card.create_deck(True)
-	print(deck)
