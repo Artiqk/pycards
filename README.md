@@ -17,14 +17,14 @@ The `Card` class represents a standard playing card with rank and suit.
 | `__str__(self)`                   | Returns a string representation of the card.                                                          |
 | `__repr__(self)`                  | Returns a string representation of the card.                                                          |
 | `__eq__(self, other)`             | Checks if two cards are equal in value and suit.                                                      |
-| `__gt__(self, other, is_ace_high=False)` | Compares the value of two cards (optionally considering Ace as high).                          |
+| `__gt__(self, other)`             | Compares the value of two cards.                                                                      |
 | `__lt__(self, other)`             | Compares the value of two cards.                                                                      |
 | `__ge__(self, other)`             | Compares if one card's value is greater than or equal to another card's value.                        |
 | `__le__(self, other)`             | Compares if one card's value is less than or equal to another card's value.                           |
 | `is_same_color_suit(self, other)` | Checks if two cards have the same color suit.                                                         |
 | `is_same_suit(self, other)`       | Checks if two cards have the same suit.                                                               |
 | `is_same_value(self, other)`      | Checks if two cards have the same value.                                                              |
-| `get_card_value(self, is_ace_high=False)` | Returns the numeric value of the card.                                                        |
+| `get_card_value(self, is_ace_high=False)` | Returns the numeric value of the card. (optionally considering Ace as high)                   |
 | `get_rank(self)`                  | Returns the rank of the card.                                                                         |
 | `get_suit(self)`                  | Returns the suit of the card.                                                                         |
 | `is_spade(self)`                  | Checks if the card is a spade.                                                                        |

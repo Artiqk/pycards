@@ -43,7 +43,7 @@ class Card:
 			return False
 
 
-	def __gt__(self, other, is_ace_high=False):
+	def __gt__(self, other):
 		if isinstance(other, Card):
 			return self.get_card_value() > other.get_card_value()
 		else:
