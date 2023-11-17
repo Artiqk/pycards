@@ -86,7 +86,7 @@ card1 = Card('Ace ', 'Spades')
 
 card2 = Card('Ace', 'Clubs')
 
-print(f"Is card1 == card2 ? {card1 > card2}")
+print(f"Is card1 == card2 ? {card1 == card2}")
 
 # Output : Is card1 == card2 ? False
 ```
