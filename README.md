@@ -15,7 +15,7 @@ The `Card` class represents a standard playing card with rank and suit.
 |-----------------------------------|-------------------------------------------------------------------------------------------------------|
 | `__init__(self, rank=None, suit=None)` | Initializes a card object with a random rank and suit if not specified.                          |
 | `__str__(self)`                   | Returns a string representation of the card.                                                          |
-| `__repr__(self)`                  | Returns a string representation of the card.                                                          |
+| `__repr__(self)`                  | Returns a string representation of the card in lists.                                                 |
 | `__eq__(self, other)`             | Checks if two cards are equal in value and suit.                                                      |
 | `__gt__(self, other)`             | Compares the value of two cards.                                                                      |
 | `__lt__(self, other)`             | Compares the value of two cards.                                                                      |
