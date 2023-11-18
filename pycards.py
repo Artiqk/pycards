@@ -12,13 +12,18 @@ class Card:
 		if rank is None:
 			self._rank = random.choice(self.get_ranks())
 		else:
-			if rank.lower() not in self.get_ranks():
+			rank = str(rank).lower()
+			if self.get_rank_from_symbol(rank) is not None:
+				self._rank = self.get_rank_from_symbol(rank)
+			elif rank not in self.get_ranks():
 				raise ValueError(f'Invalid rank : {rank}')
-			self._rank = rank.lower()
+			else:
+				self._rank = rank
 
 		if suit is None:
 			self._suit = random.choice(self.get_suits())
 		else:
+			suit = str(suit)
 			if suit.lower() not in self.get_suits():
 				raise ValueError(f'Invalid suit : {suit}')
 			self._suit = suit.lower()
@@ -27,7 +32,7 @@ class Card:
 	def __str__(self):
 		rank = self.get_rank()
 		suit = self.get_suit()
-		rank_symbole = self.get_rank_symbol(rank)
+		rank_symbole = self.get_symbol_from_rank(rank)
 		suit_symbole = self.get_suit_symbole(suit)
 		return f'{rank_symbole}{suit_symbole}'
 
@@ -167,9 +172,9 @@ class Card:
 	
 
 	@classmethod
-	def get_rank_symbol(cls, rank):
-		symboles = {
-			'ace':    'A',
+	def get_symbol_from_rank(cls, rank):
+		symbole_mapping = {
+			'ace':    'a',
 			'two':    '2',
 			'three':  '3',
 			'four':   '4',
@@ -179,11 +184,30 @@ class Card:
 			'eight':  '8',
 			'nine':   '9',
 			'ten':   '10',
-			'jack':   'J',
-			'queen':  'Q',
-			'king':   'K'
+			'jack':   'j',
+			'queen':  'q',
+			'king':   'k'
 		}
-		return symboles[rank]
+		return symbole_mapping.get(rank, None)
+	
+
+	@classmethod
+	def get_rank_from_symbol(cls, symbole):
+		rank_mapping = {
+			'a': 'ace',
+			'2': 'two',
+			'3': 'three',
+			'4': 'four',
+			'5': 'six',
+			'7': 'seven',
+			'8': 'eight',
+			'9': 'nine',
+			'10': 'ten',
+			'j': 'jack',
+			'q': 'queen',
+			'k': 'king'
+		}
+		return rank_mapping.get(symbole, None)
 
 
 	@classmethod
