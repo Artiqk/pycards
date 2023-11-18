@@ -56,13 +56,28 @@ Here are some examples illustrating the usage of the `Card` class:
 ```python
 from pycards import *
 
-ace_of_hearts = Card('ace', 'hearts')
+cards = [
+    Card('ace', 'hearts'),
+
+    Card('king', 'spades'),
+
+    Card('five', 'clubs'),
+
+    # You can use symbols instead of the complete name as well
+
+    Card('a', 'hearts'),
+
+    Card('k', 'spades'),
+
+    Card(5, 'clubs') # Card('5', 'clubs') => Also works
+]
+
 
 random_card = Card()
 
-print(f"Specific Card: {ace_of_hearts}, Random Card: {random_card}")
+print(f"List of cards : {cards}, Random Card: {random_card}")
 
-# Output: Specific Card: A♥, Random Card: K♠
+# Output: Specific Card: [list of 6 Cards objects], Random Card: ??
 ```
 
 #### Comparing cards
